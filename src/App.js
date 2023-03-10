@@ -2,7 +2,7 @@ import { ExpenseItem } from "./components/Expenses/ExpenseItem";
 import { Expenses } from "./components/Expenses/Expenses";
 import { NewExpense } from "./components/NewExpense/NewExpense";
 function App() {
-  const expenses = [
+  const listItems = [
     {
       id: "e1",
       title: "Toilet Paper",
@@ -25,14 +25,14 @@ function App() {
   ];
 
   const addInputHandler = (enteredInputData) => {
-    console.log(expenses);
+    console.log(listItems);
     console.log(enteredInputData);
   };
 
   return (
     <div>
       <NewExpense onAddInput={addInputHandler} />
-      <Expenses expenses={expenses} />
+      <Expenses expenses={listItems} />
     </div>
   );
 }

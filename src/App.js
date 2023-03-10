@@ -23,12 +23,17 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addInputHandler = (enteredInputData) => {
+    console.log(expenses);
+    console.log(enteredInputData);
+  };
+
   return (
     <div>
-      <NewExpense />
-      <Expenses expenses={expenses}/>
+      <NewExpense onAddInput={addInputHandler} />
+      <Expenses expenses={expenses} />
     </div>
-  )
+  );
 }
-
 export default App;

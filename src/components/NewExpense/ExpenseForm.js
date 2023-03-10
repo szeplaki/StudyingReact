@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './ExpenseForm.css';
-export function ExpenseForm() {
+export function ExpenseForm(props) {
     //this is the first approach when we define different states
 
     const [enteredTitle, setEnteredTitle] = useState("");
@@ -87,7 +87,9 @@ export function ExpenseForm() {
         }
         setEnteredTitle("");
         setEnteredAmount("");
-        setEnteredDate("");
+        setEnteredDate("")
+
+        props.onSaveForm(inputData);
     }
 
     return (

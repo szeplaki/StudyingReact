@@ -6,11 +6,10 @@ export function ExpenseItem(props) {
 
   const [title, setTitle] = useState(props.title);
   const handleClick = () => {
-    // setTitle("Működik!")
     if (title != props.title) {
       setTitle(props.title);
     } else {
-      setTitle("Működik!")
+      setTitle("It's working!")
     }
     
   }
@@ -21,7 +20,7 @@ export function ExpenseItem(props) {
         <h2>{title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
-      <button onClick={handleClick}>nyimi-nyomi</button>
+      <button onClick={handleClick}>Click me please!</button>
     </Card>
   );
 }

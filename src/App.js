@@ -33,7 +33,7 @@ function App() {
     //setExpensesList([enteredInputData, ...expensesList]); //this is the way to update the list with no regarding of scheduled React update
     setExpensesList((prevExpensesList) => {
       return [enteredInputData, ...prevExpensesList]
-    })
+    }) //the best way to get the very latest list
   };
 
   return (

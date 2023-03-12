@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import './ExpenseForm.css';
 export function ExpenseForm(props) {
-    //this is the first approach when we define different states
-
     const [enteredTitle, setEnteredTitle] = useState("");
     const [enteredAmount, setEnteredAmount] = useState("");
     const [enteredDate, setEnteredDate] = useState("");
@@ -18,64 +16,6 @@ export function ExpenseForm(props) {
     const dateChangeHandler = (event) => {
         setEnteredDate(event.target.value);
     }
-
-    //this is the second approach when we define a state, but with an object
-
-    // const [userInput, setUserInput] = useState({
-    //     enteredTitle: "",
-    //     enteredAmount: "",
-    //     enteredDate: ""
-    // })
-    // const titleChangeHandler = (event) => {
-    //     setUserInput({           //ez is különbség, hogy nem setEnteredTitle
-    //         ...userInput,
-    //         enteredTitle: event.target.value
-    //     });
-    // }
-    // const amountChangeHandler = (event) => {
-    //     setUserInput({
-    //         ...userInput,
-    //         enteredAmount: event.target.value
-    //     });
-    // }
-    // const dateChangeHandler = (event) => {
-    //     setUserInput({
-    //         ...userInput,
-    //         enteredDate: event.target.value
-    //     });
-    // }
-
-    //this is the third approach, when the state update is very dependent on the previous state
-
-    // const [userInput, setUserInput] = useState({
-    //     enteredTitle: "",
-    //     enteredAmount: "",
-    //     enteredDate: ""
-    // })
-    // const titleChangeHandler = (event) => {
-    //     setUserInput((prevState) => {
-    //         return {
-    //             ...prevState, 
-    //             enteredTitle: event.target.value
-    //         }
-    //     });
-    // }
-    // const amountChangeHandler = (event) => {
-    //     setUserInput((prevState) => {
-    //         return {
-    //             ...prevState,
-    //             enteredAmount: event.target.value
-    //         }
-    //     });
-    // }
-    // const dateChangeHandler = (event) => {
-    //     setUserInput((prevState) => {
-    //         return {
-    //             ...prevState,
-    //             enteredDate: event.target.value
-    //         }
-    //     });
-    // }
 
     const submitHandler = (event) => {
         event.preventDefault();
